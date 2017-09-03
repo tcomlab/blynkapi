@@ -1,4 +1,4 @@
-# blynkapi for Pytohn3
+# blynkapi for Python3
 
 This is a simple blynk HTTP/HTTPS API wrapper.
 
