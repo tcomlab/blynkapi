@@ -4,7 +4,7 @@
 #
 #
 
-from urllib2 import Request, urlopen, HTTPError, URLError
+from urllib.request import urlopen, Request, HTTPError, URLError
 import json
 
 class Blynk(object):
@@ -103,9 +103,9 @@ class Blynk(object):
 				result = "Done."
 			else:
 				result = json.loads(response_body)
-		except HTTPError, e:
+		except HTTPError as e:
 			result = 'HTTPError code = ' + str(e.code) + ' HTTPError msg = ' + str(e.msg)
-		except URLError, e:
+		except URLError as e:
 			result = 'URLError = ' + str(e)	
 		return result
 
